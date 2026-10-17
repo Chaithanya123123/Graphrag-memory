@@ -1,0 +1,14 @@
+.btn-primary{background:linear-gradient(135deg,#8b5cf6,#22d3ee);color:#060913;font-weight:700;border-radius:.65rem;padding:.55rem .9rem;font-size:.85rem}
+.btn-primary:hover{filter:brightness(1.1)}
+.btn-ghost{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:.65rem;padding:.55rem .9rem;font-size:.85rem}
+.btn-ghost:hover{border-color:#22d3ee}
+.pill{background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.4);border-radius:999px;padding:.15rem .6rem}
+.stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:.6rem;padding:.4rem}
+.stat-n{font-weight:800;font-size:1.05rem}.stat-l{font-size:.65rem;color:#94a3b8}
+.msg-u{background:linear-gradient(135deg,rgba(139,92,246,.25),rgba(34,211,238,.15));border:1px solid rgba(139,92,246,.35);border-radius:.9rem;padding:.7rem .9rem;margin-left:3rem;font-size:.87rem}
+.msg-a{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:.9rem;padding:.7rem .9rem;margin-right:1rem;font-size:.87rem;line-height:1.5}
+.msg-a code{background:rgba(34,211,238,.15);padding:0 .3rem;border-radius:.3rem;font-size:.78rem}
+.toolbadge{font-size:.65rem;background:rgba(34,211,238,.15);border:1px solid rgba(34,211,238,.4);color:#67e8f9;border-radius:999px;padding:.1rem .5rem;margin-bottom:.4rem;display:inline-block}
+#cy{background:radial-gradient(circle at 50% 40%,rgba(139,92,246,.12),transparent 60%)}
+.sample{text-align:left;font-size:.72rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:.6rem;padding:.5rem .6rem;color:#cbd5e1}
+.sample:hover{border-color:#8b5cf6;color:#fff}

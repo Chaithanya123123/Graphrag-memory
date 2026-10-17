@@ -1,0 +1,15 @@
+services:
+  falkordb:
+    # Pinned, not :latest. The available algo.* procedures differ by version and
+    # a floating tag can change under you between build and judging. The app
+    # degrades to its Python PageRank/BFS if a procedure is missing, and reports
+    # which engine ran in the "engines" field of /api/ask and /api/algorithms.
+    image: falkordb/falkordb:v4.22.1
+    ports:
+      - "6379:6379"
+      - "3000:3000"
+    volumes:
+      - falkordb-data:/data
+
+volumes:
+  falkordb-data:

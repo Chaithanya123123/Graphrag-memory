@@ -1,0 +1,198 @@
+01 / The challenge
+
+Give your agent the context to act
+Build a working agent, or a group of agents, with FalkorDB as its context layer. The graph has to shape what the agent does, not sit on the side.
+
+The problem
+
+Agents see pieces, not the whole picture. They lose track of what happened in earlier sessions, miss how people, systems, and records relate, and can't explain why they made a choice.
+
+The shift
+
+Put the agent's context in a graph. Data, memory, and company knowledge become nodes and edges the agent can follow, so it works from real relationships instead of guessing.
+
+The brief
+
+Build an agent that acts on connected data, remembers what it learns, and can show how it got to each answer.
+
+Work the graph has to do
+
+Follow connections across data
+Remember across sessions
+Share state between agents
+Connect people, projects, and decisions
+Show the path behind an answer
+One agent problem
+Pick a task where the answer depends on how things connect, and build the agent that handles it.
+
+Solo or a team of four
+Enter on your own or with up to three others. Register once, either way.
+
+Open worldwide
+Free to enter, online from anywhere, and no graph database experience needed.
+
+Three tracks
+Agents that act on connected data, agent memory and coordination, or company brain. Enter the one your idea fits.
+
+02 / Tracks
+
+Three tracks
+Build for one, or for all three at once. Each track has its own prize.
+
+🕵️
+Track 01
+
+Agents That Act on Connected Data
+Build an agent that uses the graph to decide and act. It could investigate fraud, triage security findings, or work through a codebase.
+
+Key focus
+
+Multi-hop reasoning
+Graph queries and algorithms as agent tools
+Tool selection through MCP
+Actions based on what the graph shows
+Explainable results
+🤖
+Track 02
+
+Agent Memory and Coordination
+Build agents that remember across sessions and share state with each other. Memory should persist, update over time, and be available to every agent that needs it.
+
+Key focus
+
+Episodic, semantic, and procedural memory
+Persistent conversation history
+Shared state and handoffs between agents
+High-concurrency reads and writes
+Separate memory per user or tenant
+🧠
+Track 03
+
+Company Brain
+Build an agent that understands how a company works. Connect people, teams, projects, documents, and decisions in one graph, so the agent can answer questions and get work done across all of it.
+
+Key focus
+
+Knowledge from docs, tickets, and chats in one graph
+Who owns what, and who knows what
+Tracing decisions back to their source
+Keeping knowledge current as things change
+Answers with clear sources
+Prize pool
+
+$20,000
+
+One prize for each track, plus two side prizes. Every member of a winning team gets the prize.
+
+Agents That Act on Connected Data
+
+The iPhone 18 Pro, the prize for the Agents That Act on Connected Data track
+iPhone 18 Pro
+For the best agent that uses a graph to make decisions and take action.
+
+Agent Memory and Coordination
+
+The PS5 with GTA VI, the prize for the Agent Memory and Coordination track
+PS5 with GTA VI
+For the best agents that remember across sessions and share what they know.
+
+Company Brain
+
+The M6 Mac Mini, the prize for the Company Brain track
+M6 Mac Mini
+For the best agent that understands how a company works and gets work done.
+
+Side prize
+
+AirPods 5 awarded for the best blog post
+AirPods 5
+
+1 winner
+Best blog post
+Write a blog post about your project. The best post wins a pair of AirPods 5.
+
+Side prize
+
+The t-shirt shipped to every member of the top 50 teams
+T-shirt
+
+Top 50 projects
+Top 50 submissions
+Every member of the top 50 teams gets a t-shirt, shipped to their address.
+
+03 / Why graphs
+
+Agent questions are about connections
+The hard questions agents get asked don't live in one record. The answer depends on how several things relate.
+
+01
+Which accounts are linked to this flagged transaction?
+
+02
+What did this customer ask for last month, and was it resolved?
+
+03
+Who on the team has worked on this system before?
+
+04
+What breaks if this service goes down?
+
+A graph database stores those relationships directly, so the agent can follow them in one query instead of stitching records together on every step.
+
+04 / About the sponsor
+
+Powered by FalkorDB
+An open-source graph database built for AI agents.
+
+Traversals are fast enough to run on every step of an agent loop, and one instance can hold thousands of isolated graphs, so each user, agent, or tenant gets its own. Run it locally with Docker.
+
+docker pull falkordb/falkordb:latest
+Official clients
+
+Python
+Node.js
+Java
+Rust
+Go
+PHP
+C#
+Cypher
+
+who knows about this system
+
+MATCH (p:Person)-[:WORKED_ON]->(:Project)-[:USES]->(s:System {name: $system})
+RETURN p.name AS person, count(*) AS projects
+ORDER BY projects DESC
+LIMIT 5
+Context for AI agents
+A graph your agent can read and write on every step, and still find on the next session.
+
+Agent memory
+Multi-agent state
+Connected company knowledge
+Connect your agent stack
+Use FalkorDB through the framework or protocol you already build with.
+
+GraphRAG-SDK
+QueryWeaver
+MCP
+Graphiti
+Cognee
+LangChain
+LlamaIndex
+One graph per user or tenant
+Leverage multigraph topology to create isolated graphs in a single instance, without running separate deployments.
+
+Query with Cypher
+Create nodes and relationships, match patterns, follow paths, and return what your agent needs.
+
+Graph algorithms as agent tools
+Traversals your agent can call instead of writing them itself.
+
+Shortest path
+PageRank
+Centrality
+Connected components
+Community detection
+Explore the graph
+Use FalkorDB Browser to run queries, inspect the data model, and see how records connect.

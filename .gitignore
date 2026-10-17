@@ -1,0 +1,10 @@
+# Copy to .env and fill in. Never commit .env.
+.env
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+benchmark_results.json
+*.log
+PROJECT_CONTEXT.md

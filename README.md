@@ -1,5 +1,7 @@
 # TraceMind — Graph-Native Research Agent
 
+[![CI](https://github.com/Chaithanya123123/Graphrag-memory/actions/workflows/ci.yml/badge.svg)](https://github.com/Chaithanya123123/Graphrag-memory/actions/workflows/ci.yml)
+
 TraceMind is a graph-native research assistant built for Graph Hacks with FalkorDB.
 Instead of vector-only RAG, every answer is produced by a real graph traversal
 (CITES, CONTRADICTS, WROTE, USES_METHOD, REMEMBERS) and the Cypher behind it is
@@ -45,7 +47,7 @@ Backend serves frontend itself: `app/main.py` mounts `frontend/` at `/static` an
 ## Project Structure
 
 ```
-HAckathon/
+tracemind/
   app/
     main.py      # FastAPI routes: /api/health, /api/init, /api/ask, /api/ingest, /api/graph, /api/memory + serve frontend
     agent.py     # router + answer(): question -> tool -> graph query -> formatted text
@@ -88,15 +90,16 @@ Router logic (`app/agent.py:19`):
 
 ## Steps to Run - Detailed
 
-### 1. Open project folder
+### 1. Clone the project
 
 ```powershell
-cd "C:\Users\SAIKR\OneDrive\Desktop\HAckathon"
+git clone https://github.com/Chaithanya123123/Graphrag-memory.git
+cd Graphrag-memory
 ```
 
 ### 2. Configure environment variables
 
-`.env` already exists. If not, create from example:
+Create `.env` from the example:
 
 ```powershell
 Copy-Item ".env.example" ".env"
@@ -120,7 +123,7 @@ docker compose up -d
 docker ps
 ```
 
-What this does: pulls `falkordb/falkordb:latest`, starts it on `localhost:6379` (protocol) and `localhost:3000` (browser UI), creates volume `falkordb-data`.
+What this does: pulls `falkordb/falkordb:v4.22.1`, starts it on `localhost:6379` (protocol) and `localhost:3000` (browser UI), creates volume `falkordb-data`.
 
 Verify: open `http://localhost:3000` or check health later shows `"graph_mode":"falkordb"`. If Docker is off, app logs `[graph] FalkorDB unavailable (...) -> DEMO memory mode` and still runs.
 

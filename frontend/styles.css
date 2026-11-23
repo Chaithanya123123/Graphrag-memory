@@ -1,4 +1,6 @@
 .btn-primary{background:linear-gradient(135deg,#8b5cf6,#22d3ee);color:#060913;font-weight:700;border-radius:.65rem;padding:.55rem .9rem;font-size:.85rem}
+button:disabled{opacity:.5;cursor:wait}
+.msg-u,.msg-a{overflow-wrap:anywhere}
 .btn-primary:hover{filter:brightness(1.1)}
 .btn-ghost{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:.65rem;padding:.55rem .9rem;font-size:.85rem}
 .btn-ghost:hover{border-color:#22d3ee}
